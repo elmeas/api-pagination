@@ -22,5 +22,3 @@
 - Add **real-time filtering** capabilities, allowing users to filter results dynamically based on fields such as name and id.
 - Implement **sorting functionality** that works alongside pagination and filtering (e.g., allow sorting by price, date, or name).
 
-### Example Steps:
-
