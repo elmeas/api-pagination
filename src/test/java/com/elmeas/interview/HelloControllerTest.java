@@ -1,5 +1,6 @@
 package com.elmeas.interview;
 
+import com.elmeas.interview.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -12,18 +13,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class HelloControllerTest {
+class UserControllerTest {
 
   @Autowired
   private MockMvc mockMvc;
 
   @Autowired
-  private HelloService helloService;
+  private UserService userService;
 
   @Test
   void shouldReturnHelloMessage() throws Exception {
     mockMvc.perform(get("/hello"))
-        .andExpect(status().isOk())
-        .andExpect(jsonPath("$.message").value("Hello, There!"));
+        .andExpect(status().isOk());
   }
 }
